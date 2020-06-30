@@ -1297,6 +1297,44 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <xs:complexType name="Educational">
+    <xs:annotation>
+      <xs:documentation>
+        a searchable collection of Educational resources
+      </xs:documentation>
+    </xs:annotation>
+    
+    <xs:complexContent>
+      <xs:extension base="rsm:ResourceRole">
+        <xs:sequence>
+          <xs:element name="type" type="rsm:EducationalType" minOccurs="1"
+            maxOccurs="1">
+            <xs:annotation>
+              <xs:appinfo>
+                <label>Type</label>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>             
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:simpleType name="EducationalType">
+    <xs:annotation>
+      <xs:documentation>
+        Controlled labels that indicate a type of role this resource can
+        play as an Educational resource.
+      </xs:documentation>
+    </xs:annotation>
+    
+    <xs:restriction base="xs:token">
+      
+      <xs:enumeration value="Educational"/>
+      
+    </xs:restriction>
+  </xs:simpleType>
+
    <xs:complexType name="Identity">
      <xs:annotation>
        <xs:documentation>

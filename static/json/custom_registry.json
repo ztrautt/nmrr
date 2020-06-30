@@ -122,5 +122,17 @@
     "type": "resource",
     "sort": 10,
     "refinements": ["Semantic Asset"]
+  },
+  "Educational": {
+    "title": "Educational",
+    "icon": "fa-graduation-cap",
+    "icon_color": "#565656",
+    "display_icon": true,
+    "description": "An educational resource.",
+    "role_choice": "Educational",
+    "role_type": "Educational",
+    "type": "resource",
+    "sort": 11,
+    "refinements": ["unspecified Educational"]
   }
 }
